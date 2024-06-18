@@ -1,0 +1,166 @@
+﻿<%--<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Website_MyPham.View.Admin.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Danh sách nhân viên | Quản trị Admin</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Main CSS-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- Font-icon css-->
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+</head>
+<body onload="time()" class="app sidebar-mini rtl">
+  <!-- Navbar-->
+  <header class="app-header">
+    <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+      aria-label="Hide Sidebar"></a>
+    <!-- Navbar Right Menu-->
+    <ul class="app-nav">
+
+
+      <!-- User Menu-->
+      <li><a class="app-nav__item" href="javascript:void(0);" onclick="LogoutAndRedirect();"><i class='bx bx-log-out bx-rotate-180'></i> </a>
+
+      </li>
+    </ul>
+  </header>
+  <!-- Sidebar menu-->
+  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+  <aside class="app-sidebar">
+    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<%= ResolveUrl("~/images/"+ Session["EmployeeAvatar"].ToString()) %>" width="50"
+        alt="User Image">
+      <div>
+        <p class="app-sidebar__user-name"><b><%= Session["EmployeeFullName"].ToString() %></b></p>
+        <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
+      </div>
+    </div>
+    <hr>
+    <ul class="app-menu">
+      <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Index.aspx") %>"><i
+            class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Thống kê</span></a>
+      </li>
+      <li><a class="app-menu__item " href="<%= ResolveUrl("~/View/Admin/Employee/Index.aspx") %>"><i class='app-menu__icon bx bx-id-card'></i> <span
+            class="app-menu__label">Quản lý nhân viên</span></a></li>
+      <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Customer/Index.aspx") %>"><i class='app-menu__icon bx bx-user-voice'></i><span
+            class="app-menu__label">Quản lý Customer</span></a></li>
+      <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Product/Index.aspx") %>"><i
+            class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý Product</span></a>
+      </li>
+      <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Order/Index.aspx") %>"><i class='app-menu__icon bx bx-task'></i><span
+            class="app-menu__label">Quản lý đơn hàng</span></a></li>
+       <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Category/Index.aspx") %>"><i class='app-menu__icon bx bx-task'></i><span
+      class="app-menu__label">Quản lý loại</span></a></li>
+      
+      <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-cog'></i><span class="app-menu__label">Cài
+            đặt hệ thống</span></a></li>
+    </ul>
+  </aside>
+  <main class="app-content">
+      <div class="Content">
+        <asp:ContentPlaceHolder ID="Content" runat="server" />
+      </div>
+  </main>
+  <script>
+      function LogoutAndRedirect() {
+          // Thực hiện chuyển hướng đến trang đăng nhập và xóa session
+          window.location.href = '/View/Admin/Login/Index.aspx?logout=true';
+      }
+  </script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/popper.min.js"></script>
+  <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/main.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/plugins/pace.min.js"></script>
+  <!--===============================================================================================-->
+  <script type="text/javascript" src="js/plugins/chart.js"></script>
+  <!--===============================================================================================-->
+  
+</body>
+</html>--%>
+
+
+
+
+
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Website_MyPham.View.Admin.Layout" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+   <meta charset="UTF-8" />
+    <title>Danh sách nhân viên | Quản trị Admin</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+</head>
+<body onload="time()" class="app sidebar-mini rtl">
+    <header class="app-header">
+        <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+        <ul class="app-nav">
+            <li><a class="app-nav__item" href="javascript:void(0);" onclick="LogoutAndRedirect();"><i class='bx bx-log-out bx-rotate-180'></i></a></li>
+        </ul>
+    </header>
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user">
+            <img class="app-sidebar__user-avatar" src="<%= ResolveUrl("~/images/" + Session["EmployeeAvatar"].ToString()) %>" width="50" alt="User Image">
+            <div>
+                <p class="app-sidebar__user-name"><b><%= Session["EmployeeFullName"].ToString() %></b></p>
+                <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
+            </div>
+        </div>
+        <hr>
+        <ul class="app-menu">
+            <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Index.aspx") %>"><i class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Thống kê</span></a></li>
+            <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Employee/Index.aspx") %>"><i class='app-menu__icon bx bx-id-card'></i><span class="app-menu__label">Quản lý nhân viên</span></a></li>
+            <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Customer/Index.aspx") %>"><i class='app-menu__icon bx bx-user-voice'></i><span class="app-menu__label">Quản lý Customer</span></a></li>
+            <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Product/Index.aspx") %>"><i class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý Product</span></a></li>
+            <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Order/Index.aspx") %>"><i class='app-menu__icon bx bx-task'></i><span class="app-menu__label">Quản lý đơn hàng</span></a></li>
+            <li><a class="app-menu__item" href="<%= ResolveUrl("~/View/Admin/Category/Index.aspx") %>"><i class='app-menu__icon bx bx-task'></i><span class="app-menu__label">Quản lý loại</span></a></li>
+            <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-cog'></i><span class="app-menu__label">Cài đặt hệ thống</span></a></li>
+        </ul>
+    </aside>
+    <main class="app-content">
+        <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="Content" runat="server" />
+        </form>
+    </main>
+    <script>
+        function LogoutAndRedirect() {
+            window.location.href = '/View/Admin/Login/Index.aspx?logout=true';
+        }
+    </script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/plugins/pace.min.js"></script>
+    <script type="text/javascript" src="js/plugins/chart.js"></script>
+</body>
+</html>
