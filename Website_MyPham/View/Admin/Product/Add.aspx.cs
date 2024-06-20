@@ -10,10 +10,20 @@ namespace Website_MyPham.View.Admin.Product
 {
     public partial class Add : System.Web.UI.Page
     {
-        ProductController  data=new ProductController();
+        CategoryController dataCategory = new CategoryController();
+        ProductController data = new ProductController();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Hienthi();
+            }
+        }
+        public void Hienthi()
+        {
+            CategoryRepeater.DataSource = dataCategory.DsCategory();
+            CategoryRepeater.DataBind();
         }
         protected void btnThem_Click(object sender, EventArgs e)
         {

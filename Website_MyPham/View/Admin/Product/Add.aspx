@@ -14,7 +14,7 @@
                    </div>
                     
                           <div class="form-group col-md-4">
-                               <label class="control-label">Mã vạch</label>
+                               <label class="control-label">Tên sản phẩm</label>
                                <input class="form-control" type="text" name="maVach" required>
                           </div>
                          <div class="form-group col-md-4">
@@ -28,17 +28,26 @@
                           <div class="form-group col-md-4">
                                 <label class="control-label">Trạng thái</label>
                                 <input class="form-control" type="text" name="trangThai" required>
-                          </div>
+                          </div> 
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Tên thể loại</label>
+                            <br />
+                              <select style="width: 150px; height: 30px" name="maLoai">
+                                <asp:Repeater ID="CategoryRepeater" runat="server">
+                                    <ItemTemplate>
+                                        <option value="<%# Eval("category_id") %>"><%# Eval("name") %></option>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </select>
+                        </div> 
+                        
                          <div class="form-group col-md-4">
                              <label class="control-label">Mã loại</label>
-                             <input class="form-control" type="text" name="maLoai" required>
+                             <input class="form-control" type="text" name="ma1Loai" required>
                          </div>
                          <div class="form-group col-md-4">
                               <label class="control-label">Ảnh</label>
                               <input class="form-control" type="file" name="anh" accept="image/*" required>
-                             <div class="col-md-4">
-                                <img id="imagePreview" src="#" alt="Ảnh xem trước" style="max-width: 100%; max-height: 200px;">
-                            </div>
                          </div>
                           <asp:Button ID="btnThem" CssClass="btn btn-save" runat="server" Text="Thêm sản phẩm" OnClick="btnThem_Click" />
                          <%-- <asp:Button ID="btn btn-cancel"  runat="server" Text="Hủy bỏ" PostBackUrl="~/View/Admin/Customer/Index.aspx" />--%>
@@ -48,16 +57,4 @@
            </div>
      </div>
 </div>
-<script>
-    function previewImage(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                var preview = document.getElementById('imagePreview');
-                preview.src = e.target.result;
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-</script>
 </asp:Content>
