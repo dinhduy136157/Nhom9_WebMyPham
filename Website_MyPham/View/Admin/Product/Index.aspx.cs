@@ -23,7 +23,13 @@ namespace Website_MyPham.View.Admin.Product
         public void Hienthi()
         {
             grdDs.DataSource = data.DsProduct();
-            DataBind();
+            grdDs.DataBind();
+        }
+
+        protected void grdDs_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdDs.PageIndex = e.NewPageIndex;
+            Hienthi();
         }
         public override void VerifyRenderingInServerForm(Control control)
         {

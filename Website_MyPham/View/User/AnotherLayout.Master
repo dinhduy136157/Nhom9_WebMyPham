@@ -31,7 +31,7 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Owl caroucel Js-->
-    <script src="assets/owlCarousel/owl.carousel.min.js"></script>
+    <script src="../assets/owlCarousel/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <style>
         .header__account-welcome {

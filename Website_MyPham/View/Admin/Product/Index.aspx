@@ -1,6 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/Admin/Layout.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Website_MyPham.View.Admin.Product.Index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
+    <style>
+        /* Thêm các quy tắc CSS tùy chỉnh */
+        .gridview-pager {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gridview-pager a, .gridview-pager span {
+            margin: 0 5px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            background-color: #f8f9fa;
+            color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .gridview-pager a:hover {
+            background-color: #e9ecef;
+            border-color: #007bff;
+        }
+
+        .gridview-pager .selected {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+    </style>
     <div class="row element-button">
         <div class="col-sm-3">
             <a class="btn btn-add btn-sm" href="Add.aspx" title="Thêm"><i class="fas fa-plus"></i>Tạo mới sản phẩm</a>
@@ -18,7 +47,9 @@
         </div>
     </div>
 
-    <asp:GridView ID="grdDs" runat="server" AutoGenerateColumns="false" CssClass="table table-striped" OnRowDeleting="grdDs_RowDeleting" DataKeyNames="product_id" OnRowEditing="grdDs_RowEditing">
+    <asp:GridView ID="grdDs" runat="server" AutoGenerateColumns="false" CssClass="table table-striped"
+        AllowPaging="true" PageSize="10" OnPageIndexChanging="grdDs_PageIndexChanging"
+        PagerStyle-CssClass="gridview-pager">
         <Columns>
             <asp:BoundField DataField="product_id" HeaderText="Mã sản phẩm" />
             <asp:BoundField DataField="SKU" HeaderText="Tên sản phẩm" />
@@ -43,6 +74,8 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+
+
 
     <asp:Panel ID="pnlNoResults" runat="server" CssClass="alert alert-warning mt-3" Visible="false">
         Không tìm thấy sản phẩm phù hợp.

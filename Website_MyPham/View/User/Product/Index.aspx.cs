@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using Website_MyPham.Controllers;
 using Website_MyPham.Models;
 
@@ -11,8 +12,6 @@ namespace Website_MyPham.View.User.Product
     public partial class Index : System.Web.UI.Page
     {
         ProductController data = new ProductController();
-        CartController dataCart = new CartController();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,8 +26,36 @@ namespace Website_MyPham.View.User.Product
             if (int.TryParse(Request.QueryString["ProductID"], out productID))
             {
                 var products = data.ProductDetail(productID);
+                var categoryId = products[0].Category_catego;
+                var dataProCate = data.ProductCategory(categoryId); // Giả sử đây là phương thức để lấy danh sách sản phẩm
+
+                foreach (var product in dataProCate)
+                {
+                string productHtml = $@"
+                <div>
+                    <a href='#' class='product'>
+                        <div class='product__avt' style='background-image: url(../assets/img/product/{product.image})'></div>
+                        <div class='product__info'>
+                            <h3 class='product__name'>{product.SKU}</h3>
+                            <div class='product__price'>
+                                <div class='price__old'>340.000 <span class='price__unit'>đ</span></div>
+                                <div class='price__new'>{product.price} <span class='price__unit'>đ</span></div>
+                            </div>
+                        </div>
+                        <div class='product__sale'>
+                            <span class='product__sale-percent'>22%</span>
+                            <span class='product__sale-text'>Giảm</span>
+                        </div>
+                    </a>
+                </div>";
+
+                    ProductPlaceHolder.Controls.Add(new Literal { Text = productHtml });
+                }
                 if (products != null && products.Count > 0)
                 {
+                    //ProductCateRepeater.DataSource = data.ProductCategory(productID); ;
+                    //ProductCateRepeater.DataBind();
+
                     var product = products[0];
                     // Gán dữ liệu vào các control
                     productName.InnerText = product.SKU;
@@ -54,7 +81,10 @@ namespace Website_MyPham.View.User.Product
                 productImage.Style["background-image"] = "none";
             }
         }
+        private void DisplayProducts()
+        {
 
+        }
         [WebMethod]
         public static string AddToCart(int productID, int quantity)
         {

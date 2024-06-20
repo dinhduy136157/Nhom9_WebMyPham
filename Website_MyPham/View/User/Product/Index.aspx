@@ -21,7 +21,8 @@
                         <h3 id="productName" class="productInfo__name" runat="server"></h3>
                         <div class="productInfo__price">
                             <span id="productPrice" class="priceInfo__unit" runat="server">đ</span>
-                        </div>0000
+                        </div>
+                        0000
                         <div id="productDescription" class="productInfo__description" runat="server"></div>
                         <div class="productInfo__addToCart">
                             <div class="buttons_added">
@@ -72,173 +73,10 @@
             </div>
             <div class="main__frame ">
                 <div class="grid wide ">
-                    <h3 class="category__title ">Ngọc Ánh Cometics</h3>
+                    <h3 class="category__title ">Nhóm 9</h3>
                     <h3 class="category__heading ">Sản Phẩm Tương tự</h3>
                     <div class="owl-carousel hight owl-theme ">
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product1.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product1.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product2.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product3.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product4.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product5.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product6.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product4.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product6.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product1.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
-                        <a href="# " class="product ">
-                            <div class="product__avt " style="background-image: url(assets/img/product/product4.jpg)">
-                            </div>
-                            <div class="product__info ">
-                                <h3 class="product__name ">Framed-Sleeve Tops Group</h3>
-                                <div class="product__price ">
-                                    <div class="price__old ">340.000 <span class="price__unit ">đ</span></div>
-                                    <div class="price__new ">320.000 <span class="price__unit ">đ</span></div>
-                                </div>
-                            </div>
-                            <div class="product__sale ">
-                                <span class="product__sale-percent ">22%</span>
-                                <span class="product__sale-text ">Giảm</span>
-                            </div>
-                        </a>
+                        <asp:PlaceHolder ID="ProductPlaceHolder" runat="server"></asp:PlaceHolder>
                     </div>
                 </div>
             </div>
