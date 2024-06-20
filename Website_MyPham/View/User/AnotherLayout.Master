@@ -152,7 +152,7 @@
                     </div>
                 </li>
                 <li class="header__nav-item">
-                    <a href="news.html" class="header__nav-link">Tin Tức</a>
+                    <a href="../OrderDetail/Index.aspx" class="header__nav-link">Xem đơn hàng đã mua</a>
                 </li>
                 <li class="header__nav-item">
                     <a href="contact.html" class="header__nav-link">Liên Hệ</a>

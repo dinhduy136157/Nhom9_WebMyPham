@@ -29,7 +29,7 @@ namespace Website_MyPham.View.User.HienThiTheoGia
                 case "less500":
                     ProductRepeater.DataSource = data.DsProduct().Where(p => p.price <= 500000).ToList();
                     break;
-                case "than500":
+                case "more500":
                     ProductRepeater.DataSource = data.DsProduct().Where(p => p.price > 500000).ToList();
                     break;
             }
